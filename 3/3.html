@@ -1,0 +1,34 @@
+<html>
+    <body>
+        <canvas width="500" height="500"></canvas>
+        <script>
+            let canvas = document.querySelector('canvas');
+            let context = canvas.getContext('2d');
+
+            context.fillRect(100, 100, 400, 400);
+            
+            let word = "papers";
+            let sentence = "Read " + word;
+
+            function doSomething(params) {
+                console.log(params);
+            }
+
+            doSomething(sentence);
+
+            function subtract(a, b) {
+                return a - b;
+            }
+
+            let result = subtract(18, 11);
+            console.log(result);
+
+            function multiply(a, b) {
+                return a * b;
+            }
+
+            let result2 = multiply(11, 11);
+            console.log(result2);
+        </script>
+    </body>
+</html>
