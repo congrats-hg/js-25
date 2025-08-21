@@ -1,13 +1,11 @@
 class Solution:
-    def firstUniqChar(self, s: str) -> int:
-        answer = -1
-        set_alphabet = set()
-        for i in range(len(s)):
-            if s[i] not in s[i+1:] and s[i] not in set_alphabet:
-                return i
-            else:
-                set_alphabet.add(s[i])
-        return answer
+    def checkIfPangram(self, sentence: str) -> bool:
+        sentence_to_set = set(list(sentence))
+        if len(sentence_to_set) == 26:
+            return True
+        else:
+            return False
 
-c = Solution()
-print(c.firstUniqChar("aabb"))
+instance = Solution()
+print(instance.checkIfPangram("leetcode"))
+print(instance.checkIfPangram("thequickbrownfoxjumpsoverthelazydog"))

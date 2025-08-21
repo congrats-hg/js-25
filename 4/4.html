@@ -1,0 +1,17 @@
+<html>
+    <body>
+        <canvas width="500" height="500"></canvas>
+        <script>
+            let canvas = document.querySelector('canvas');
+            let context = canvas.getContext('2d');
+
+            context.fillStyle = 'magenta';
+            context.fillRect(100, 100, 400, 400);
+
+            context.beginPath();
+            context.rect(100, 100, 400, 400);
+            context.stroke();
+
+        </script>
+    </body>
+</html>
