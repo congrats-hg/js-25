@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <canvas width="1000" height="1000"></canvas>
+        <script>
+            let canvas = document.querySelector('canvas');
+            let context = canvas.getContext('2d');
+
+            const timer = ms => new Promise(res=>setTimeout(res, ms))
+            
+            async function load () {
+                for (let i = 50; i <1500; i++) {
+                    context.beginPath();
+                    context.arc(300, 300, i, 0, Math.PI*2);
+                    context.fill();
+                    await timer(1);
+                }
+            }
+
+            load();
+            
+        </script>
+    </body>
+</html>
