@@ -1,0 +1,51 @@
+<html>
+    <body>
+        <canvas width="700" height="700"></canvas>
+
+        <script>
+            let canvas = document.querySelector('canvas');
+            let context = canvas.getContext('2d');
+
+            context.lineWidth = 10;
+            context.beginPath();
+            context.rect(120, 90, 420, 430);
+            context.stroke();
+
+            context.fillStyle = 'yellow';
+            context.fillRect(100, 100, 400, 400);
+
+            context.fillStyle = 'white';
+            context.beginPath();
+            context.arc(200, 126, 30, 0, Math.PI*2);
+            context.fill();
+
+            context.fillStyle = 'white';
+            context.beginPath();
+            context.arc(470, 200, 50, 0, Math.PI*2);
+            context.fill();
+
+            context.fillStyle = 'white';
+            context.beginPath();
+            context.arc(410, 300, 30, 0, Math.PI*2);
+            context.fill();
+
+            context.lineWidth = 10;
+            context.beginPath();
+            context.rect(80, 70, 400, 400);
+            context.stroke();
+
+            let word = 'fruit';
+            let sentence = 'I ordered '+word+' toay.';
+
+            function saySomething(params) {
+                console.log(params);
+                return word;
+            }
+
+            saySomething(sentence);
+
+            let result = saySomething(word);
+            console.log(result);
+        </script>
+    </body>
+</html>
