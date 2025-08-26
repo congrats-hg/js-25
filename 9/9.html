@@ -1,0 +1,41 @@
+<html>
+    <canvas width="500" height="500"></canvas>
+    <body>
+        <script>
+            let years = [2040, 2041, 2042];
+            let menu = ['starter', 'main', 'dessert', 'drinks', 'sides'];
+
+            for (let i = 0; i < 4; i++) {
+                console.log(menu[i]);
+            }
+
+            for (let i = 0; i < 10; i++) {
+                years.push(2040 + i);
+            }
+
+            let canvas = document.querySelector('canvas');
+            let context = canvas.getContext('2d');
+
+            for (let i = 0; i < 5; i++) {
+                for (let j = 0; j < 5; j++) {
+                    let width = 60;
+                    let height = 60;
+                    let gap = 20;
+                    let x = 100 + (width + gap) * i;
+                    let y = 100 + (height + gap) * j;
+    
+                    context.beginPath();
+                    context.rect(x, y, width, height);
+                    context.stroke();
+
+                    if (i > 0 && i < 4) {
+                        context.beginPath();
+                        context.rect(x + 8, y + 8, width - 16, height - 16);
+                        context.stroke();
+                    }
+                }
+            }
+
+        </script>
+    </body>
+</html>
