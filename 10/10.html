@@ -1,0 +1,20 @@
+<html>
+    <body>
+        <canvas width="500" height="500"></canvas>
+        <script>
+            canvas = document.querySelector('canvas');
+            context = canvas.getContext('2d');
+
+            for (let i = 0; i < 5; i++) {
+                x = 100;
+                y = 100;
+                width = 20 + (x * i);
+                height = 20;
+
+                context.beginPath();
+                context.rect(x, y + (i*30), width, height);
+                context.fill();
+            }
+        </script>
+    </body>
+</html>
